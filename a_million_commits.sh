@@ -20,7 +20,7 @@ do
       cd $D
       for HOUR in {09..17}
       do
-        echo "$i on $M/$D/$Y" > commit.md
+        echo "$HOUR on $M/$D/$Y" > commit.md
         MINUTE=$(jot -r 1 10 50)
         SECOND=$(jot -r 1 10 50)
         export GIT_COMMITTER_DATE="$Y-$M-$D $HOUR:$MINUTE:$SECOND"
@@ -36,4 +36,3 @@ do
   cd ../
   ((Y++))
 done
-
